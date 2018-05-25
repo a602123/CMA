@@ -1,0 +1,7 @@
+F:\GitTest\CMA\CMA.Common\CMA.Common.WebApiClient\bin\Release\CMA.Common.WebApiClient.dll
+F:\GitTest\CMA\CMA.Common\CMA.Common.WebApiClient\bin\Release\CMA.Common.WebApiClient.pdb
+F:\GitTest\CMA\CMA.Common\CMA.Common.WebApiClient\bin\Release\System.Net.Http.Formatting.dll
+F:\GitTest\CMA\CMA.Common\CMA.Common.WebApiClient\bin\Release\System.Net.Http.Formatting.xml
+F:\GitTest\CMA\CMA.Common\CMA.Common.WebApiClient\obj\Release\CMA.Common.WebApiClient.dll
+F:\GitTest\CMA\CMA.Common\CMA.Common.WebApiClient\obj\Release\CMA.Common.WebApiClient.pdb
+F:\GitTest\CMA\CMA.Common\CMA.Common.WebApiClient\obj\Release\CMA.Common.WebApiClient.csprojResolveAssemblyReference.cache

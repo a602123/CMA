@@ -1,0 +1,13 @@
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Business\bin\Release\CMA.DataProvider.Business.dll.config
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Business\bin\Release\CMA.DataProvider.Business.dll
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Business\bin\Release\CMA.DataProvider.Business.pdb
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Business\bin\Release\CMA.Common.Model.dll
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Business\bin\Release\CMA.DataProvider.DataOperator.dll
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Business\bin\Release\EntityFramework.dll
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Business\bin\Release\CMA.DataProvider.DataOperator.pdb
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Business\bin\Release\CMA.Common.Model.pdb
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Business\bin\Release\EntityFramework.xml
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Business\bin\Release\zh-Hans\EntityFramework.resources.dll
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Business\obj\Release\CMA.DataProvider.Business.csprojResolveAssemblyReference.cache
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Business\obj\Release\CMA.DataProvider.Business.dll
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Business\obj\Release\CMA.DataProvider.Business.pdb

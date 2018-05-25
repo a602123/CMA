@@ -1,0 +1,2 @@
+F:\GitTest\CMA\CMA.CollectCenter\CollectTest\bin\Debug\CollectTest.exe.config
+F:\GitTest\CMA\CMA.CollectCenter\CollectTest\obj\Debug\CollectTest.csprojResolveAssemblyReference.cache

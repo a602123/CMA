@@ -1,0 +1,24 @@
+﻿@model CMA.Common.Model.WebParamter
+
+    <div class="form-body">
+        <div class="form-group">
+            <label class="col-md-2 control-label">端口</label>
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.Port, new { @placeholder = "端口", @required = "required", @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">主机IP</label>
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.Host, new { @placeholder = "主机IP", @required = "required", @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">轮询周期</label>
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.Interval, new { @placeholder = "轮询周期", @required = "required", @number = "true", @class = "form-control" })
+            </div>
+        </div>
+    </div>

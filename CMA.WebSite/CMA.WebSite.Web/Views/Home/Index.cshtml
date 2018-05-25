@@ -1,0 +1,100 @@
+﻿
+@{
+    Layout = "~/Views/_LayoutPage.cshtml";
+    ViewBag.FirstMenu = "fMenuHome";
+    ViewBag.SecondMenu = "sMenuHome";
+}
+
+
+<div class="page-content">
+    <div class="breadcrumbs">
+        <h1>主页</h1>
+        <ol class="breadcrumb">
+            <li>
+                <a href="#">主页</a>
+            </li>
+            <li class="active">主页目录一</li>
+        </ol>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="dashboard-stat blue">
+                <div class="visual">
+                    <i class="fa fa-dashboard"></i>
+                </div>
+                <div class="details">
+                    <div class="number">
+                        <span data-counter="counterup" data-value="50">0</span>
+                    </div>
+                    <div class="desc"> 管理设备数 </div>
+                </div>
+                <a class="more" href="javascript:;">
+                    查看详细
+                    <i class="m-icon-swapright m-icon-white"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="dashboard-stat red">
+                <div class="visual">
+                    <i class="fa fa-warning"></i>
+                </div>
+                <div class="details">
+                    <div class="number">
+                        <span data-counter="counterup" data-value="25">0</span>
+                    </div>
+                    <div class="desc"> 未处理报警数 </div>
+                </div>
+                <a class="more" href="javascript:;">
+                    查看详细
+                    <i class="m-icon-swapright m-icon-white"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="dashboard-stat green">
+                <div class="visual">
+                    <i class="fa fa-television"></i>
+                </div>
+                <div class="details">
+                    <div class="number">
+                        <span data-counter="counterup" data-value="3">0</span>
+                    </div>
+                    <div class="desc"> 采集器数 </div>
+                </div>
+                <a class="more" href="javascript:;">
+                    查看详细
+                    <i class="m-icon-swapright m-icon-white"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="dashboard-stat purple">
+                <div class="visual">
+                    <i class="fa fa-globe"></i>
+                </div>
+                <div class="details">
+                    <div class="number">
+                        +
+                        <span data-counter="counterup" data-value="89"></span>%
+                    </div>
+                    <div class="desc"> Brand Popularity </div>
+                </div>
+                <a class="more" href="javascript:;">
+                    View more
+                    <i class="m-icon-swapright m-icon-white"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+</div>
+
+@section PageLevelPluginsScript{
+<script src="~/Plugins/counterup/jquery.waypoints.min.js"></script>
+<script src="/Plugins/counterup/jquery.counterup.js"></script>
+    
+    }
+           

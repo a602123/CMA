@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CMADataProviderModelStoreContainer" CdmEntityContainer="db_cmaEntities">
+    <EntitySetMapping Name="tb_message">
+      <EntityTypeMapping TypeName="CMA.DataProvider.Model.tb_message">
+        <MappingFragment StoreEntitySet="tb_message">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Device" ColumnName="Device" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="ValueType" ColumnName="ValueType" />
+          <ScalarProperty Name="cFree1" ColumnName="cFree1" />
+          <ScalarProperty Name="bFree1" ColumnName="bFree1" />
+          <ScalarProperty Name="iFree1" ColumnName="iFree1" />
+          <ScalarProperty Name="fFree1" ColumnName="fFree1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_user">
+      <EntityTypeMapping TypeName="CMA.DataProvider.Model.tb_user">
+        <MappingFragment StoreEntitySet="tb_user">
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telphone" ColumnName="Telphone" />
+          <ScalarProperty Name="RealName" ColumnName="RealName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_role">
+      <EntityTypeMapping TypeName="CMA.DataProvider.Model.tb_role">
+        <MappingFragment StoreEntitySet="tb_role">
+          <ScalarProperty Name="iFree" ColumnName="iFree" />
+          <ScalarProperty Name="cFree" ColumnName="cFree" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="tb_userrole" TypeName="CMA.DataProvider.Model.tb_userrole" StoreEntitySet="tb_userrole">
+      <EndProperty Name="tb_user">
+        <ScalarProperty Name="Id" ColumnName="UId" />
+      </EndProperty>
+      <EndProperty Name="tb_role">
+        <ScalarProperty Name="Id" ColumnName="RId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="tb_action">
+      <EntityTypeMapping TypeName="CMA.DataProvider.Model.tb_action">
+        <MappingFragment StoreEntitySet="tb_action">
+          <ScalarProperty Name="iFree" ColumnName="iFree" />
+          <ScalarProperty Name="cFree" ColumnName="cFree" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="tb_roleaction1" TypeName="CMA.DataProvider.Model.tb_roleaction1" StoreEntitySet="tb_roleaction">
+      <EndProperty Name="tb_role">
+        <ScalarProperty Name="Id" ColumnName="RId" />
+      </EndProperty>
+      <EndProperty Name="tb_action">
+        <ScalarProperty Name="Id" ColumnName="AId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="tb_monitoritem">
+      <EntityTypeMapping TypeName="CMA.DataProvider.Model.tb_monitoritem">
+        <MappingFragment StoreEntitySet="tb_monitoritem">
+          <ScalarProperty Name="CollectorHost" ColumnName="CollectorHost" />
+          <ScalarProperty Name="Paramter" ColumnName="Paramter" />
+          <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Host" ColumnName="Host" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_collector">
+      <EntityTypeMapping TypeName="CMA.DataProvider.Model.tb_collector">
+        <MappingFragment StoreEntitySet="tb_collector">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Host" ColumnName="Host" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

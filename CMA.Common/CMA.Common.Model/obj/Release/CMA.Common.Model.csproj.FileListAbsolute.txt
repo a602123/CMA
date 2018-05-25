@@ -1,0 +1,5 @@
+F:\GitTest\CMA\CMA.Common\CMA.Common.Model\bin\Release\CMA.Common.Model.dll
+F:\GitTest\CMA\CMA.Common\CMA.Common.Model\bin\Release\CMA.Common.Model.pdb
+F:\GitTest\CMA\CMA.Common\CMA.Common.Model\obj\Release\CMA.Common.Model.dll
+F:\GitTest\CMA\CMA.Common\CMA.Common.Model\obj\Release\CMA.Common.Model.pdb
+F:\GitTest\CMA\CMA.Common\CMA.Common.Model\obj\Release\CMA.Common.Model.csprojResolveAssemblyReference.cache

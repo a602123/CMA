@@ -1,0 +1,187 @@
+﻿@*@model CMA.Common.Model.MonitorItemDBModel*@
+@using CMA.Common.Model;
+@{
+    ViewBag.FirstMenu = "fMenuMonitor";
+    ViewBag.SecondMenu = "sMenuDevice";
+    Layout = "/Views/_LayoutPage.cshtml";
+}
+
+
+@section PageLevelPluginsCss{
+}
+
+
+<div class="page-content">
+    <!--导航-->
+    <div class="breadcrumbs">
+        <h1>设备信息</h1>
+        <ol class="breadcrumb">
+            <li>
+                <a href="#">监控管理</a>
+            </li>
+            <li class="active">设备管理</li>
+        </ol>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet light bordered">
+
+                <div class="portlet-title tabbable-line">
+                    <div class="caption caption-md">
+                        <i class="icon-globe theme-font hide"></i>
+                        <span class="caption-subject font-blue-madison bold uppercase">设备信息</span>
+                    </div>
+                    <ul class="nav nav-tabs">
+                        <li class="active" id="nav_tab_1_1">
+                            <a href="#tab_1_1" data-toggle="tab">基本信息</a>
+                        </li>
+                        <li id="nav_tab_1_2">
+                            <a href="#tab_1_2" data-toggle="tab">设备参数</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="portlet-body">
+                    @*<div id="alert_container"></div>*@
+
+                    <form id="formData" class="form-horizontal portlet-form">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab_1_1">
+                                <div class="form-body">
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">设备名称</label>
+                                        <div class="col-md-4">
+                                            <div class="input-group-control">
+                                                <input class="form-control" id="deviceName" name="Name" type="text" required placeholder="设备名称" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">描述</label>
+                                        <div class="col-md-4">
+                                            <div class="input-group-control">
+                                                <input class="form-control" id="note" name="Note" type="text" required placeholder="描述" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">主机IP</label>
+                                        <div class="col-md-4">
+                                            <div class="input-group-control">
+                                                <input class="form-control" id="host" name="MHost" type="text" required placeholder="主机IP" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">所属采集器IP</label>
+                                        <div class="col-md-4">
+                                            <div class="input-group-control">
+                                                <input class="form-control" type="text" name="CollectorHost" id="collectHost" required placeholder="所属采集器IP" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane" id="tab_1_2">
+                                <div class="form-body">
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">参数类型</label>
+                                        <div class="col-md-4">
+                                            <select class="form-control disabled" onchange="TypeSelectChanged(this);" id="typeSelect" name="typeSelect">
+                                                <option value="请选择">请选择</option>
+                                                @{
+                                                    foreach (var item in Model.typeList)
+                                                    {
+                                                        <option value="@item">@EnumExtension.GetItemTypeName((MonitorItemType)Convert.ToInt32(item))</option>
+                                                    }
+                                                }
+
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div id="paramterDiv">
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-md-9">
+                                            <button type="button" onclick="add();" class="btn green">提交</button>
+                                            <button type="button" onclick="javascript:location.href='/Device/Index'" class="btn default">取消</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section PageLevelPluginsScript{
+}
+@section PageLevelScripts{
+    <script>
+        function add() {
+            $.ajax({
+                type: 'POST',
+                url: "/Device/Add",
+                data: $('#formData').serialize(),
+                success: function (data) {
+                    if (data.State == true) {
+                        AlertFunc("success", "提交成功");
+                    }
+                    else {
+                        AlertFunc("danger", "提交失败");
+                    }
+                },
+                error: function () {
+                    AlertFunc("danger", "出现未知错误");
+                }
+            });
+        }
+
+        function TypeSelectChanged(select) {
+            var index = $("#typeSelect").val();
+            if (index != '请选择') {
+                var page = index + "Paramter";
+                console.log(page);
+                $("#paramterDiv").load(page);
+            } else {
+                $("#paramterDiv").html('');
+            }
+        }
+
+        function AlertFunc(type, message) {
+            App.alert({
+                container: $("#alert_container").val(),
+                //place: $("#alert_place").val(),
+                type: type,
+                message: message,
+                close: true,
+                reset: true,
+                focus: false,
+                closeInSeconds: '10000',
+                icon: 'fa fa-info'
+            });
+        }
+    </script>
+}
+
+
+

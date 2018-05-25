@@ -1,0 +1,11 @@
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.CoreClient\bin\Debug\CMA.WebSite.CoreClient.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.CoreClient\bin\Debug\CMA.WebSite.CoreClient.pdb
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.CoreClient\obj\Debug\CMA.WebSite.CoreClient.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.CoreClient\obj\Debug\CMA.WebSite.CoreClient.pdb
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.CoreClient\bin\Debug\CMA.Common.Model.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.CoreClient\bin\Debug\CMA.Common.WebApiClient.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.CoreClient\bin\Debug\System.Net.Http.Formatting.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.CoreClient\bin\Debug\CMA.Common.Model.pdb
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.CoreClient\bin\Debug\CMA.Common.WebApiClient.pdb
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.CoreClient\bin\Debug\System.Net.Http.Formatting.xml
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.CoreClient\obj\Debug\CMA.WebSite.CoreClient.csprojResolveAssemblyReference.cache

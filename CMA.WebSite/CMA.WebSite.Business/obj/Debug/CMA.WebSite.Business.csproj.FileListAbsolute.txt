@@ -1,0 +1,17 @@
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.Business\bin\Debug\CMA.WebSite.Business.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.Business\bin\Debug\CMA.WebSite.Business.pdb
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.Business\bin\Debug\CMA.Common.EncryptionHelper.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.Business\bin\Debug\CMA.Common.Model.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.Business\bin\Debug\CMA.WebSite.CoreClient.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.Business\bin\Debug\CMA.WebSite.DBClient.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.Business\bin\Debug\CMA.Common.WebApiClient.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.Business\bin\Debug\System.Net.Http.Formatting.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.Business\bin\Debug\CMA.WebSite.CoreClient.pdb
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.Business\bin\Debug\CMA.WebSite.DBClient.pdb
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.Business\bin\Debug\CMA.Common.EncryptionHelper.pdb
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.Business\bin\Debug\CMA.Common.Model.pdb
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.Business\bin\Debug\CMA.Common.WebApiClient.pdb
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.Business\bin\Debug\System.Net.Http.Formatting.xml
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.Business\obj\Debug\CMA.WebSite.Business.csprojResolveAssemblyReference.cache
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.Business\obj\Debug\CMA.WebSite.Business.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.Business\obj\Debug\CMA.WebSite.Business.pdb

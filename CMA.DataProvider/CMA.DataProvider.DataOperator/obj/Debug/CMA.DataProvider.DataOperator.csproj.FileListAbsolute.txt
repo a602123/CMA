@@ -1,0 +1,9 @@
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.DataOperator\bin\Debug\CMA.DataProvider.DataOperator.dll.config
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.DataOperator\bin\Debug\CMA.DataProvider.DataOperator.dll
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.DataOperator\bin\Debug\CMA.DataProvider.DataOperator.pdb
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.DataOperator\bin\Debug\EntityFramework.dll
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.DataOperator\bin\Debug\EntityFramework.xml
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.DataOperator\bin\Debug\zh-Hans\EntityFramework.resources.dll
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.DataOperator\obj\Debug\CMA.DataProvider.DataOperator.dll
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.DataOperator\obj\Debug\CMA.DataProvider.DataOperator.pdb
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.DataOperator\obj\Debug\CMA.DataProvider.DataOperator.csprojResolveAssemblyReference.cache

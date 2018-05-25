@@ -1,0 +1,29 @@
+﻿using CMA.Common.Model;
+using CMA.Common.WebApiClient;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CMA.WebSite.DBClient
+{
+    public class UserDBClient
+    {
+        public UserInfoModel Get(string userName)
+        {
+            try
+            {
+                string url = UrlHelper.GetInstance().GetDBUrl($"User/Get?username={userName}");
+                WebApiClient client = new WebApiClient();
+                return client.Get<UserInfoModel>(url);
+            }
+            catch (WebApiClientException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
+    }
+}

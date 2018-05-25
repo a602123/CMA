@@ -1,0 +1,7 @@
+F:\GitTest\CMA\CMA.Common\CMA.Common.MySQLHelper\bin\Release\CMA.Common.MySQLHelper.dll
+F:\GitTest\CMA\CMA.Common\CMA.Common.MySQLHelper\bin\Release\CMA.Common.MySQLHelper.pdb
+F:\GitTest\CMA\CMA.Common\CMA.Common.MySQLHelper\bin\Release\MySql.Data.dll
+F:\GitTest\CMA\CMA.Common\CMA.Common.MySQLHelper\bin\Release\MySql.Data.xml
+F:\GitTest\CMA\CMA.Common\CMA.Common.MySQLHelper\obj\Release\CMA.Common.MySQLHelper.dll
+F:\GitTest\CMA\CMA.Common\CMA.Common.MySQLHelper\obj\Release\CMA.Common.MySQLHelper.pdb
+F:\GitTest\CMA\CMA.Common\CMA.Common.MySQLHelper\obj\Release\CMA.Common.MySQLHelper.csprojResolveAssemblyReference.cache

@@ -1,0 +1,69 @@
+﻿@using CMA.Common.Model;
+@{
+    ViewBag.FirstMenu = "fMenuMonitor";
+    ViewBag.SecondMenu = "sMenuDevice";
+    Layout = "/Views/_LayoutPage.cshtml";
+}
+@section PageLevelPluginsCss{
+    <link href="/Plugins/bootstrap-table/bootstrap-table.css" rel="stylesheet" />
+}
+<div class="page-content">
+    <div class="portlet light bordered">
+        <div class="portlet-title">
+            <div class="caption font-dark">
+                <i class="icon-list font-dark"></i>
+                <span class="caption-subject bold uppercase">设备列表</span>
+            </div>
+            <div class="tools"> </div>
+        </div>
+        <div class="clearfix">
+            <button type="button" class="btn blue-madison pull-right" style="margin-right:15px;" onclick="javascript: location.href = '/Device/Add'">添加设备</button>
+            <button type="button" class="btn blue-madison pull-right" style="margin-right:5px;" onclick="javascript: location.reload()">刷新</button>
+        </div>
+        <div class="portlet-body">
+            <table id="table" class="table table-striped table-bordered table-hover dt-responsive"
+                   data-toggle="table"
+                   data-url="/Device/GetList"
+                   data-detail-formatter="detailFormatter"
+                   data-click-to-select="false" data-id-field="Id"
+                   data-pagination="true" data-page-size="10" data-page-list="[50,100,200]">
+                <thead>
+                    <tr class="active">
+                        <th data-field="item.Name">
+                            名称
+                        </th>
+                        <th data-field="itemType">
+                            类型
+                        </th>
+                        <th data-field="item.Host">
+                            IP
+                        </th>
+                        <th data-field="item.Note">
+                            备注
+                        </th>
+                        <th data-field="item.CollectorHost">
+                            所属采集器
+                        </th>
+                        <th data-formatter="operatorFormatter" data-align="center">
+                            操作
+                        </th>
+
+
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+@section PageLevelPluginsScript{
+    <script src="/Plugins/bootstrap-table/bootstrap-table.js"></script>
+    <script src="/Plugins/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+}
+
+@section PageLevelScripts{
+    <script src="/JS/pages/MonitorItem/MonitorItem-index.js"></script>
+}
+
+
+
+

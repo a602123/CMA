@@ -1,0 +1,229 @@
+﻿@{    ViewBag.FirstMenu = "fMenuSystem";
+    ViewBag.SecondMenu = "sMenuUser";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+@model CMA.Common.Model.UserInfoModel
+@using CMA.Common.Model;
+@section PageLevelCss{
+    <link href="/CSS/Site.css" rel="stylesheet" />
+    <link href="/Plugins/select2/css/select2.css" rel="stylesheet" />
+    <link href="/Plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" />
+}
+<div class="page-content">
+    <!--导航-->
+    <div class="breadcrumbs">
+        <h1>用户信息</h1>
+        <ol class="breadcrumb">
+            <li>
+                <a href="#">系统设置</a>
+            </li>
+            <li class="active">用户添加</li>
+        </ol>
+    </div>
+    <!--用户信息-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet light bordered">
+
+                <div class="portlet-title tabbable-line">
+                    <div class="caption caption-md">
+                        <i class="icon-globe theme-font hide"></i>
+                        <span class="caption-subject font-blue-madison bold uppercase">用户信息</span>
+                    </div>
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#tab_1_1" data-toggle="tab">基本信息</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="portlet-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab_1_1">
+                            <form id="form_useradd"  class="form-horizontal portlet-form">
+                          <!--
+                             @*@using (Ajax.BeginForm("Add", "User", new AjaxOptions()
+                            {
+                                OnFailure = "Failure",
+                                OnSuccess = "Success",
+                                HttpMethod = "post"
+
+                            }, new { @class = "form-horizontal portlet-form" }))
+                            {*@-->
+                                <div class="form-body">                                    
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">@Html.DisplayNameFor(u => u.Username)</label>
+                                        <div class="col-md-4 disabled">
+                                            <div class="input-group-control">
+                                                @Html.TextBoxFor(u => u.Username, new { @class = "form-control", @required = "required", @*@data_msg_required = "请您输入用户名",*@ @placeholder = "用户名" })
+                                                @*@Html.ValidationMessageFor(u => u.Username)*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">@Html.DisplayNameFor(u => u.Password)</label>
+                                        <div class="col-md-4 disabled">
+                                            <div class="input-group-control">
+                                                @Html.TextBoxFor(u => u.Password, new { @class = "form-control", @required= "required", @minlength="3",@type = "password", @placeholder = "密  码",
+                                               //@data_msg_required = "请您输入密码",
+                                               //@data_msg_minlength="您的密码设置位数须大于3位"
+                                           })
+                                                @*@Html.ValidationMessageFor(u => u.Password)*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">@Html.DisplayNameFor(u => u.PasswordAgain)</label>
+                                        <div class="col-md-4 disabled">
+                                            <div class="input-group-control">
+                                                @Html.TextBoxFor(u => u.PasswordAgain, new { @class = "form-control", @required = "required", @equalTo ="#Password", @type = "password", @placeholder = "密  码",
+                                               //@data_msg_required= "请您输入确认密码",
+                                               @data_msg_equalTo = "两次密码不一致"
+                                           })
+                                                @*@Html.ValidationMessageFor(u => u.PasswordAgain)*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">@Html.DisplayNameFor(u => u.Email)</label>
+                                        <div class="col-md-4">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-envelope"></i>
+                                                </span>
+                                                @Html.TextBoxFor(u => u.Email, new { @class = "form-control ",@placeholder = "电子邮箱",
+                                               @required ="required" ,@email="true",
+                                               //@data_msg_required = "请您输入电子邮箱",
+                                               //@data_msg_email= "您的电子邮箱设置格式错误"
+                                           })
+                                            </div>
+                                            @*@Html.ValidationMessageFor(u => u.Email)*@
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">@Html.DisplayNameFor(u => u.RealName)</label>
+                                        <div class="col-md-4">
+                                            <div class="input-group-control">
+                                                @Html.TextBoxFor(u => u.RealName, new { @class = "form-control", @placeholder = "姓名" ,
+                                               @required = "required",
+                                               //@data_msg_required = "请您输入姓名",
+                                           })
+                                                @*@Html.ValidationMessageFor(u => u.RealName)*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">@Html.DisplayNameFor(u => u.Telphone)</label>
+                                        <div class="col-md-4">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-phone"></i>
+                                                </span>
+                                                @Html.TextBoxFor(u => u.Telphone, new { @class = "form-control", @placeholder = "电话",
+                                               @required = "required", @number="true",
+                                               //@data_msg_required = "请您输入电话",
+                                               @data_msg_number = "您的电话格式错误"
+                                           })
+                                            </div>
+                                            @*@Html.ValidationMessageFor(u => u.Telphone)*@
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="multiple">角色</label>
+                                    <div class="col-md-4">
+                                        <div class="input-group-control">                                          
+                                           @Html.DropDownListFor(m=>m.RoleList, @ViewBag.Rolelist as IEnumerable<SelectListItem>,
+                                           new { @class = "form-control select2-multiple",@multiple = "multiple", @id = "multiSelectForRole",
+                                               @required= "required",/* @data_msg_required= "请您选择角色",*/
+                                           })
+                                           @*@Html.ValidationMessageFor(u => u.RoleList)*@
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-md-offset-3 col-md-9">
+                                                    <button type="button" onclick="Add()" class="btn green">提交</button>
+                                                    <button type="reset" class="btn default">重置</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @*}*@</form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ @section PageLevelPluginsScript{
+     @*<script src="/Plugins/MissoftValite/jquery.validate.min.js"></script>
+    <script src="/Plugins/MissoftValite/jquery.validate.unobtrusive.min.js"></script>*@
+     <script src="/Plugins/MissoftValite/jquery.unobtrusive-ajax.min.js"></script>
+     <script src="~/Plugins/jquery-validation/js/jquery.validate.js"></script>
+     <script src="~/Plugins/jquery-validation/js/additional-methods.js"></script>
+     <script src="~/Plugins/jquery-validation/js/localization/messages_zh.js"></script>
+     <script src="~/JS/pages/Tool.js"></script>
+     <script src="/Plugins/select2/js/select2.full.min.js"></script>
+ }
+ @section PageLevelScripts{
+<script src="/Plugins/select2/js/components-select2.min.js"></script>
+     <script> 
+         $(document).ready(function () {
+             $("#multiSelectForRole").select2({
+                 placeholder: "角色"
+             });
+         });
+         function Add() {
+             formvalidation('form_useradd');
+             if($("#form_useradd").valid())
+             {
+                 AlertFunc("success", "您所填写的表单无任何错误,已成功提交.");
+                 var model = new Object();
+                 model.Username = $("input[name='Username']").val();
+                 model.Password = $("input[name='Password']").val();
+                 model.PasswordAgain = $("input[name='PasswordAgain']").val();
+                 model.Email = $("input[name='Email']").val();
+                 model.RealName = $("input[name='RealName']").val();
+                 model.Telphone = $("input[name='Telphone']").val();
+                 model.RoleList = new Array();
+                 $("#multiSelectForRole option:selected").each(function () {
+                     model.RoleList.push($(this).val());
+                 });
+                 if (model.RoleList.length > 0) {
+                     $.ajax({
+                         type: "post",
+                         url: "/User/Add",
+                         data: model,
+                         dataType: "json",
+                         success: function (data) {
+                             if (data.State == true) {                                 
+                                 AlertFunc("success", data.Message);
+                                 location.href="/User/Index"
+                             }
+                             else {                                 
+                                 AlertFunc("warning", data.Message);
+                             }
+                         },
+                         error: function () {
+                             alert("error!")
+                         }
+                     })
+                 } else {
+                     AlertFunc("warning", "请为角色选择操作权限！");
+                 }
+             } else {
+                 AlertFunc("warning", "您所填写的表单有部分错误,请检查重新提交.");
+             }
+         }
+     </script>
+ }

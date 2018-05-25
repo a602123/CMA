@@ -1,0 +1,217 @@
+﻿@model CMA.Common.Model.UserInfoModel
+@{
+    ViewBag.FirstMenu = "fMenuSystem";
+    ViewBag.SecondMenu = "sMenuUser";
+    Layout = "/Views/_LayoutPage.cshtml";
+}
+
+@section PageLevelPluginsCss{
+    <link href="/Plugins/select2/css/select2.css" rel="stylesheet" />
+    <link href="/Plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" />
+}
+
+<div class="page-content">
+    <!--导航-->
+    <div class="breadcrumbs">
+        <h1>用户信息</h1>
+        <ol class="breadcrumb">
+            <li>
+                <a href="#">系统设置</a>
+            </li>
+            <li class="active">用户管理</li>
+        </ol>
+    </div>
+
+    <!--用户信息-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet light bordered">
+
+                <div class="portlet-title tabbable-line">
+                    <div class="caption caption-md">
+                        <i class="icon-globe theme-font hide"></i>
+                        <span class="caption-subject font-blue-madison bold uppercase">用户信息</span>
+                    </div>
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#tab_1_1" data-toggle="tab">基本信息</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="portlet-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab_1_1">
+                            <form id="formData" class="form-horizontal portlet-form">
+                                <div class="form-body">
+                                    <div class="form-group">
+                                        @Html.HiddenFor(m => m.Id)
+                                        <label class="col-md-2 control-label">用户名</label>
+                                        <div class="col-md-4 disabled">
+                                            <div class="input-group-control">
+                                                @Html.TextBoxFor(m => m.Username, new { @class = "form-control", @placeholder = "用户名" ,
+                                               @readonly= "readonly"
+                                           })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Email</label>
+                                        <div class="col-md-4">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-envelope"></i>
+                                                </span>
+                                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "电子邮件",
+                                               @required = "required",@email="true" })
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">姓名</label>
+                                        <div class="col-md-4">
+                                            <div class="input-group-control">
+                                                @Html.TextBoxFor(m => m.RealName, new { @class = "form-control", @placeholder = "姓名",
+                                               @required = "required"})
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">电话</label>
+                                        <div class="col-md-4">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-phone"></i>
+                                                </span>
+                                                @Html.TextBoxFor(m => m.Telphone, new { @class = "form-control", @placeholder = "电话",
+                                               @required = "required",@number="true" ,
+                                               @data_msg_number = "您的电话格式错误"
+                                           })
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="multiple">角色</label>
+                                        <div class="col-md-4">
+                                            <div class="input-group-control">
+                                                <select class="form-control select2-multiple" required="required" name="RoleList" multiple="multiple" id="multiSelectForRole">
+                                                    @*<option value="AL">Alabama</option>
+                                                        <option value="WY">Wyoming</option>*@
+                                                    @{
+                                                        var roleList = ViewBag.RoleList as List<CMA.Common.Model.RoleModel>;
+                                                        var selectedList = Model.RoleList as List<long>;
+                                                        if (roleList != null && selectedList != null)
+                                                        {
+                                                            foreach (var item in roleList)
+                                                            {
+                                                                if (selectedList.Contains(item.Id))
+                                                                {
+                                                                    <option value="@item.Id" selected="selected">@item.Name</option>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <option value="@item.Id">@item.Name</option>
+                                                                }
+                                                            }
+                                                        }
+
+                                                    }
+                                                </select>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-md-offset-3 col-md-9">
+                                                    <button type="button" onclick="edit();" class="btn green">提交</button>
+                                                    <button type="button" class="btn default">取消</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section PageLevelPluginsScript{
+    <script src="/Plugins/select2/js/select2.full.min.js"></script>
+    <script src="~/Plugins/jquery-validation/js/jquery.validate.js"></script>
+    <script src="~/Plugins/jquery-validation/js/additional-methods.js"></script>
+    <script src="~/Plugins/jquery-validation/js/localization/messages_zh.js"></script>
+    <script src="~/JS/pages/Tool.js"></script>
+}
+
+@section PageLevelScripts{
+    <script src="/Plugins/select2/js/components-select2.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#multiSelectForRole").select2({
+                placeholder: "角色"
+            });
+        });
+
+
+        function edit() {            
+            formvalidation('formData');
+            if ($("#formData").valid()) {
+                AlertFunc("success", "您所填写的表单无任何错误,已成功提交.");
+                var model = new Object();
+                model.RoleList = new Array();
+
+                $("#multiSelectForRole option:selected").each(function () {
+                    model.RoleList.push($(this).val());
+                });
+
+                if (model.RoleList.length > 0) {
+                    model.Email = $('input[name = "Email"]').val();
+                    model.Id = $('input[name = "Id"]').val();
+                    model.RealName = $('input[name = "RealName"]').val();
+                    model.Telphone = $('input[name = "Telphone"]').val();
+
+                    $.ajax({
+                        type: 'POST',
+                        url: "/User/Edit",
+                        data: model,
+                        //dataType: 'json',
+                        success: function (data) {
+                            if (data.State == true) {
+                                AlertFunc("success", "ok");
+                                location.href = "/User/Index"
+                            }
+                            else {
+                                AlertFunc("danger", "false");
+                            }
+                        },
+                        error: function () {
+                            AlertFunc("danger", "error");
+                        }
+                    });
+                } else {
+                    AlertFunc("warning", "请为用户选择角色！");
+                }
+            }
+            else {
+                AlertFunc("warning", "您所填写的表单有部分错误,请检查重新提交.");
+            }
+        }
+
+    </script>
+
+}
+

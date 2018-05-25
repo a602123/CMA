@@ -1,0 +1,275 @@
+﻿
+@{
+    ViewBag.FirstMenu = "fMenuSystem";
+    ViewBag.SecondMenu = "sMenuUser";
+    ViewBag.Title = "添加角色";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+@model CMA.Common.Model.RoleModel
+@section PageLevelPluginsCss{
+    <link href="/Plugins/bootstrap-multiselect/css/multi-select.css" rel="stylesheet" />
+    <link href="~/Plugins/bootstrap-multiselect/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="~/Plugins/bootstrap-multiselect/css/select2-bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Plugins/bootstrap-multiselect/css/select2.min.css" rel="stylesheet" />
+
+   
+}
+@section PageLevelCss{
+ 
+
+    
+
+}
+<div class="page-content">
+
+    <!--导航-->
+    <div class="breadcrumbs">
+        <h1>角色信息</h1>
+        <ol class="breadcrumb">
+            <li>
+                <a href="#">系统设置</a>
+            </li>
+            <li class="active">角色添加</li>
+        </ol>
+    </div>
+
+    <!--用户信息-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet light bordered">
+                <div class="alert-danger display-hide">
+                    <button class="close" data-close="alert" style="color:darkgray">X</button>
+                    <span id="msg"></span>
+                </div>      
+                <div class="portlet-title tabbable-line">
+                    <div class="caption caption-md">
+                        <i class="icon-globe theme-font hide"></i>
+                        <span class="caption-subject font-blue-madison bold uppercase">角色信息</span>
+                    </div>
+                   
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#tab_1_1" data-toggle="tab">角色信息</a>
+                           
+                        </li>
+                        <li>
+                            <a href="#tab_1_2" data-toggle="tab">对应权限</a>
+                        </li>
+                    </ul>
+                </div>
+                
+              
+                <div class="portlet-body">
+                  
+                        <form id="formData" class="form-horizontal" method="post">
+                   
+                       
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab_1_1">
+                                    <div class="form-body">
+                                        <div class="form-group">
+
+                                            <label class="col-md-2 control-label">@Html.DisplayNameFor(u => u.Name)</label>
+                                            <div class="col-md-4 disabled">
+                                                <div class="input-group-control">
+                                                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @placeholder = "角色" })<br />
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label">@Html.DisplayNameFor(u => u.Description)</label>
+                                            <div class="col-md-4">
+                                                <div class="input-group-control">
+                                                    @Html.TextAreaFor(m => m.Description, new { @class = "form-control", @placeholder = "角色描述" })<br />
+                                                 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="tab_1_2">
+                                    <div class="form-body">
+                                        <div class="form-group">
+                                            <div class="col-md-offset-1 col-md-2">
+                                                <button type="button" class="btn btn-default" onclick="SelectAll();">全选</button>
+                                                <button type="button" class="btn btn-default" onclick="DeSelectAll();">清空</button>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-offset-1 col-md-9">
+                                                <select multiple="multiple" class="form-control" id="my_multi_select2" name="ActionList"  >
+                                                    @{
+                                                        var list = ViewBag.ActionList as IEnumerable<CMA.Common.Model.ActionModel>;
+                                                        if (list != null)
+                                                        {
+                                                            var listGroup = list.GroupBy(n => n.Description);
+
+                                                            foreach (var optgroup in listGroup)
+                                                            {
+                                                                <optgroup label="@optgroup.Key">
+                                                                    @foreach (var item in optgroup)
+                                                                    {
+                                                                        <option value="@item.Id">@item.Name</option>
+                                                                    }
+                                                                </optgroup>
+                                                            }
+                                                        }
+
+                                                    }
+                                                </select>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="form-actions">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-md-offset-3 col-md-9">
+                                                    <button type="button" onclick="Add()"class="btn green">提交</button>
+                                                    <button type="button" class="btn default">取消</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            
+                                </form>
+                            </div>
+            </div>
+        </div>
+    </div>
+    @section PageLevelPluginsScript{
+   
+        <script src="~/Plugins/bootstrap-multiselect/js/jquery.multi-select.js"></script>
+        <script src="~/Plugins/bootstrap-multiselect/js/bootstrap-select.min.js"></script>
+        <script src="~/Plugins/bootstrap-multiselect/js/select2.full.min.js"></script>
+    <script src="~/Plugins/jquery-validation/js/jquery.validate.js"></script>
+
+   
+    }
+  
+    @section PageLevelScripts{
+ 
+        <script src="/JS/pages/role-edit.js"></script>
+         <script src="~/JS/HelperCommon.js"></script>
+        <script>
+            function AlertFunc(type, message) {
+                App.alert({
+                    container: $("#alert_container").val(),
+                    //place: $("#alert_place").val(),
+                    type: type,
+                    message: message,
+                    close: true,
+                    reset: true,
+                    focus: false,
+                    closeInSeconds: '10000',
+                    icon: 'fa fa-info'
+                });
+            }
+            function SelectAll() {
+                $('#my_multi_select2').multiSelect('select_all');
+            }
+            function DeSelectAll() {
+                $('#my_multi_select2').multiSelect('deselect_all');
+
+            }
+          
+
+            $('#formData').validate({
+                errorElement: 'span', //default input error message container
+                errorClass: 'help-block help-block-error', // default input error message class
+                focusInvalid: false, // do not focus the last invalid input
+                rules: {
+                    Name: {
+                        required: true
+                    },
+                    Description: {
+                        required: true
+                    },
+                  
+
+
+                },
+
+                messages: {
+                    Name: {
+                        required: "请输入角色名"
+                    },
+                    Description: {
+                        required: "请输入描述"
+                    },
+                
+                },
+
+                success: function (label) {
+                    label
+                        .closest('.form-group').removeClass('has-error'); // set success class to the control group
+                },
+
+                highlight: function (element) { // hightlight error inputs
+                    $(element)
+                        .closest('.form-group').removeClass("has-success").addClass('has-error'); // set error class to the control group   
+                },
+
+             
+
+
+               
+            });
+            function Add()
+            {
+                if($("#formData").valid())
+                {
+                    
+
+                  var  ActionList = new Array();
+
+                    $("#my_multi_select2 option:selected").each(function () {
+                        model.ActionList.push($(this).val());
+                    });
+
+                    if (ActionList.length <= 0) {
+                        AlertFunc("danger", "请为角色分配权限");
+                        return false;
+                    }
+
+                    if ($('#formData').validate()) {
+                        $.ajax({
+                            type: 'post',
+                            url: '/Role/Add',
+
+                            data: $('#formData').serialize(),
+                            success: function (msg) {
+                                if (msg.State == true) {
+                                    AlertFunc("success", msg.Message);
+
+
+                                }
+                                else {
+                                    AlertFunc("danger", msg.Message);
+
+                                }
+
+                            },
+                            error: function (msg) {
+                                AlertFunc("danger", msg.Message);
+
+
+                            }
+                        });
+                    }
+
+                }
+            }
+        </script>
+
+    }
+

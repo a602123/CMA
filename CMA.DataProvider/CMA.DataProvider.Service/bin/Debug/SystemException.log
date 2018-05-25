@@ -1,0 +1,180 @@
+2016/8/11 14:19:23发生系统异常。
+System.IO.FileNotFoundException: 未能加载文件或程序集“System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”
+   在 System.Web.Http.HttpConfiguration..ctor(HttpRouteCollection routes)
+   在 System.Web.Http.SelfHost.HttpSelfHostConfiguration..ctor(Uri baseAddress)
+   在 System.Web.Http.SelfHost.HttpSelfHostConfiguration..ctor(String baseAddress)
+   在 CMA.DataProvider.Service.Program.Main() 位置 F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Service\Program.cs:行号 27
+   在 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   在 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   在 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   在 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Threading.ThreadHelper.ThreadStart()
+
+=== 预绑定状态信息 ===
+日志: DisplayName = System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+ (Fully-specified)
+日志: Appbase = file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/
+日志: 初始 PrivatePath = NULL
+调用程序集: System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35。
+===
+日志: 此绑定从 default 加载上下文开始。
+日志: 正在使用应用程序配置文件: F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Service\bin\Debug\CMA.DataProvider.Service.vshost.exe.Config
+日志: 使用主机配置文件: 
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 在应用程序配置文件中找到重定向: 5.2.3.0 已重定向到 5.2.3.0。
+日志: 策略后引用: System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+日志: 尝试下载新的 URL file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/System.Net.Http.Formatting.DLL。
+日志: 尝试下载新的 URL file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/System.Net.Http.Formatting/System.Net.Http.Formatting.DLL。
+日志: 尝试下载新的 URL file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/System.Net.Http.Formatting.EXE。
+日志: 尝试下载新的 URL file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/System.Net.Http.Formatting/System.Net.Http.Formatting.EXE。
+
+
+
+2016/8/11 14:54:08发生系统异常。
+System.IO.FileNotFoundException: 未能加载文件或程序集“System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”
+   在 System.Web.Http.HttpConfiguration..ctor(HttpRouteCollection routes)
+   在 System.Web.Http.SelfHost.HttpSelfHostConfiguration..ctor(Uri baseAddress)
+   在 System.Web.Http.SelfHost.HttpSelfHostConfiguration..ctor(String baseAddress)
+   在 CMA.DataProvider.Service.Program.Main() 位置 F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Service\Program.cs:行号 27
+   在 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   在 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   在 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   在 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Threading.ThreadHelper.ThreadStart()
+
+=== 预绑定状态信息 ===
+日志: DisplayName = System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+ (Fully-specified)
+日志: Appbase = file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/
+日志: 初始 PrivatePath = NULL
+调用程序集: System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35。
+===
+日志: 此绑定从 default 加载上下文开始。
+日志: 正在使用应用程序配置文件: F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Service\bin\Debug\CMA.DataProvider.Service.vshost.exe.Config
+日志: 使用主机配置文件: 
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 在应用程序配置文件中找到重定向: 5.2.3.0 已重定向到 5.2.3.0。
+日志: 策略后引用: System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+日志: 尝试下载新的 URL file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/System.Net.Http.Formatting.DLL。
+日志: 尝试下载新的 URL file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/System.Net.Http.Formatting/System.Net.Http.Formatting.DLL。
+日志: 尝试下载新的 URL file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/System.Net.Http.Formatting.EXE。
+日志: 尝试下载新的 URL file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/System.Net.Http.Formatting/System.Net.Http.Formatting.EXE。
+
+
+
+2016/8/11 14:57:35发生系统异常。
+System.IO.FileNotFoundException: 未能加载文件或程序集“System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35”
+   在 System.Web.Http.HttpConfiguration..ctor(HttpRouteCollection routes)
+   在 System.Web.Http.SelfHost.HttpSelfHostConfiguration..ctor(Uri baseAddress)
+   在 System.Web.Http.SelfHost.HttpSelfHostConfiguration..ctor(String baseAddress)
+   在 CMA.DataProvider.Service.Program.Main() 位置 F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Service\Program.cs:行号 27
+   在 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   在 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   在 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   在 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Threading.ThreadHelper.ThreadStart()
+
+=== 预绑定状态信息 ===
+日志: DisplayName = System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+ (Fully-specified)
+日志: Appbase = file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/
+日志: 初始 PrivatePath = NULL
+调用程序集: System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35。
+===
+日志: 此绑定从 default 加载上下文开始。
+日志: 正在使用应用程序配置文件: F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Service\bin\Debug\CMA.DataProvider.Service.vshost.exe.Config
+日志: 使用主机配置文件: 
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 在应用程序配置文件中找到重定向: 5.2.3.0 已重定向到 5.2.3.0。
+日志: 策略后引用: System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+日志: 尝试下载新的 URL file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/System.Net.Http.Formatting.DLL。
+日志: 尝试下载新的 URL file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/System.Net.Http.Formatting/System.Net.Http.Formatting.DLL。
+日志: 尝试下载新的 URL file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/System.Net.Http.Formatting.EXE。
+日志: 尝试下载新的 URL file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/System.Net.Http.Formatting/System.Net.Http.Formatting.EXE。
+
+
+
+2016/8/11 14:58:08发生系统异常。
+System.IO.FileNotFoundException: 未能加载文件或程序集“Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed”
+   在 System.Net.Http.Formatting.BaseJsonMediaTypeFormatter..ctor()
+   在 System.Net.Http.Formatting.JsonMediaTypeFormatter..ctor()
+   在 System.Net.Http.Formatting.MediaTypeFormatterCollection.CreateDefaultFormatters()
+   在 System.Web.Http.HttpConfiguration.DefaultFormatters(HttpConfiguration config)
+   在 System.Web.Http.HttpConfiguration..ctor(HttpRouteCollection routes)
+   在 System.Web.Http.SelfHost.HttpSelfHostConfiguration..ctor(Uri baseAddress)
+   在 System.Web.Http.SelfHost.HttpSelfHostConfiguration..ctor(String baseAddress)
+   在 CMA.DataProvider.Service.Program.Main() 位置 F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Service\Program.cs:行号 27
+   在 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   在 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   在 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   在 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Threading.ThreadHelper.ThreadStart()
+
+=== 预绑定状态信息 ===
+日志: DisplayName = Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed
+ (Fully-specified)
+日志: Appbase = file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/
+日志: 初始 PrivatePath = NULL
+调用程序集: System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35。
+===
+日志: 此绑定从 default 加载上下文开始。
+日志: 正在使用应用程序配置文件: F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.Service\bin\Debug\CMA.DataProvider.Service.vshost.exe.Config
+日志: 使用主机配置文件: 
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 策略后引用: Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed
+日志: 尝试下载新的 URL file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/Newtonsoft.Json.DLL。
+日志: 尝试下载新的 URL file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/Newtonsoft.Json/Newtonsoft.Json.DLL。
+日志: 尝试下载新的 URL file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/Newtonsoft.Json.EXE。
+日志: 尝试下载新的 URL file:///F:/GitTest/CMA/CMA.DataProvider/CMA.DataProvider.Service/bin/Debug/Newtonsoft.Json/Newtonsoft.Json.EXE。
+
+
+
+2016/8/15 17:40:17发生系统异常。
+System.AggregateException: 发生一个或多个错误。 ---> System.ServiceModel.AddressAlreadyInUseException: HTTP 无法注册 URL http://+:9001/。另一应用程序已使用 HTTP.SYS 注册了该 URL。 ---> System.Net.HttpListenerException: 在前缀“http://+:9001/”上侦听失败，因为它与计算机上的现有注册冲突。
+   在 System.Net.HttpListener.AddAllPrefixes()
+   在 System.Net.HttpListener.Start()
+   在 System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   在 System.ServiceModel.Channels.CommunicationObject.EndOpen(IAsyncResult result)
+   在 System.Web.Http.SelfHost.HttpSelfHostServer.OpenListenerComplete(IAsyncResult result)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   在 System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   在 System.Threading.Tasks.Task.Wait()
+   在 CMA.DataProvider.Service.Program.Main()
+   在 System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)
+   在 System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   在 Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   在 System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   在 System.Threading.ThreadHelper.ThreadStart()
+---> (内部异常 #0) System.ServiceModel.AddressAlreadyInUseException: HTTP 无法注册 URL http://+:9001/。另一应用程序已使用 HTTP.SYS 注册了该 URL。 ---> System.Net.HttpListenerException: 在前缀“http://+:9001/”上侦听失败，因为它与计算机上的现有注册冲突。
+   在 System.Net.HttpListener.AddAllPrefixes()
+   在 System.Net.HttpListener.Start()
+   在 System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   在 System.ServiceModel.Channels.CommunicationObject.EndOpen(IAsyncResult result)
+   在 System.Web.Http.SelfHost.HttpSelfHostServer.OpenListenerComplete(IAsyncResult result)<---
+
+
+

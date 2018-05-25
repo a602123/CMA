@@ -1,0 +1,107 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ConfigHelper.GetInstance().SiteName -登陆</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" />    
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="/Plugins/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="/Plugins/simple-line-icons/simple-line-icons.css" rel="stylesheet" />
+    <link href="/Plugins/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="/Plugins/uniform/css/uniform.default.css" rel="stylesheet" />
+    <link href="/Plugins/bootstrap-switch/css/bootstrap-switch.css" rel="stylesheet" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <link href="/Plugins/select2/css/select2.min.css" rel="stylesheet" />
+    <link href="/Plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" />
+    <link href="/Plugins/bootstrap-toastr/toastr.css" rel="stylesheet" />
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL STYLES -->
+    <link href="/CSS/components.css" rel="stylesheet" />
+    <link href="/CSS/plugins.css" rel="stylesheet" />
+    <!-- END THEME GLOBAL STYLES -->
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link href="~/Plugins/layer/skin/layer.css" rel="stylesheet" />
+    <link href="/CSS/pages/login.css" rel="stylesheet" />
+    <!-- END PAGE LEVEL STYLES -->
+
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+
+    <!-- BEGIN : LOGIN PAGE 5-1 -->
+    <div class="user-login-5">
+        <div class="row bs-reset">
+            <div class="col-md-6 bs-reset">
+                <div class="login-bg" style="background-image:url(/Image/bg1.jpg)">
+                   
+                </div>
+            </div>
+            <div class="col-md-6 login-container bs-reset">
+                <div class="login-content">
+                    <h1>@ConfigHelper.GetInstance().SiteName</h1>
+                    <p> Centralized monitoring alarm system  </p>
+                    <form action="javascript:;" class="login-form" method="post">
+                        <div class="alert alert-danger display-hide">
+                            <button class="close" data-close="alert" style="color:darkgray">X</button>
+                            <span id="msg"></span>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="用户名" name="username" required />
+                            </div>
+                            <div class="col-xs-6">
+                                <input class="form-control form-control-solid placeholder-no-fix form-group" type="password" autocomplete="off" placeholder="密码" name="password" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-8 text-right col-sm-offset-4">
+                                <button class="btn blue" type="submit">登陆</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="login-footer">
+                    <div class="row bs-reset">
+                        
+                            <div class="login-copyright text-right col-xs-9 col-xs-offset-3">
+                                <p>Copyright &copy; 北京北方博业 2016</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END : LOGIN PAGE 5-1 -->
+    <!--[if lt IE 9]>
+    <!-- BEGIN CORE PLUGINS -->
+    <script src="/Plugins/jquery.min.js"></script>
+    <script src="/Plugins/bootstrap/js/bootstrap.js"></script>
+    <script src="/Plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
+    <script src="/Plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <script src="/Plugins/jquery.blockui.min.js"></script>
+    <script src="/Plugins/uniform/jquery.uniform.js"></script>
+    <script src="/Plugins/bootstrap-switch/js/bootstrap-switch.js"></script>
+    <!-- END CORE PLUGINS -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src="/Plugins/bootstrap-toastr/toastr.js"></script>
+    <script src="/Plugins/jquery-validation/js/jquery.validate.js"></script>
+    <script src="/Plugins/jquery-validation/js/additional-methods.js"></script>
+    <script src="/Plugins/select2/js/select2.full.js"></script>    
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL SCRIPTS -->
+    <script src="/JS/app.js"></script>
+    <!-- END THEME GLOBAL SCRIPTS -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="/Plugins/layer/layer.js"></script>    
+    <script src="/JS/pages/login.js"></script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+</body>
+</html>

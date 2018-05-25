@@ -1,0 +1,11 @@
+F:\GitTest\CMA\CMA.Common\CMA.Common.RedisHelper\bin\Release\CMA.Common.RedisHelper.dll.config
+F:\GitTest\CMA\CMA.Common\CMA.Common.RedisHelper\bin\Release\CMA.Common.RedisHelper.dll
+F:\GitTest\CMA\CMA.Common\CMA.Common.RedisHelper\bin\Release\CMA.Common.RedisHelper.pdb
+F:\GitTest\CMA\CMA.Common\CMA.Common.RedisHelper\bin\Release\Newtonsoft.Json.dll
+F:\GitTest\CMA\CMA.Common\CMA.Common.RedisHelper\bin\Release\Newtonsoft.Json.xml
+F:\GitTest\CMA\CMA.Common\CMA.Common.RedisHelper\obj\Release\CMA.Common.RedisHelper.dll
+F:\GitTest\CMA\CMA.Common\CMA.Common.RedisHelper\obj\Release\CMA.Common.RedisHelper.pdb
+F:\GitTest\CMA\CMA.Common\CMA.Common.RedisHelper\obj\Release\CMA.Common.RedisHelper.csprojResolveAssemblyReference.cache
+F:\GitTest\CMA\CMA.Common\CMA.Common.RedisHelper\bin\Release\StackExchange.Redis.dll
+F:\GitTest\CMA\CMA.Common\CMA.Common.RedisHelper\bin\Release\StackExchange.Redis.pdb
+F:\GitTest\CMA\CMA.Common\CMA.Common.RedisHelper\bin\Release\StackExchange.Redis.xml

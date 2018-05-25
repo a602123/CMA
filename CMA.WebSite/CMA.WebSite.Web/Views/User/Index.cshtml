@@ -1,0 +1,124 @@
+﻿
+@{
+    ViewBag.FirstMenu = "fMenuSystem";
+    ViewBag.SecondMenu = "sMenuUser";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+@section PageLevelPluginsCss{
+    <link href="/Plugins/bootstrap-table/bootstrap-table.css" rel="stylesheet" />
+}
+<div class="page-content">
+    <!--导航-->
+    @*<div class="breadcrumbs">
+            <h1>用户一览</h1>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#">系统设置</a>
+                </li>
+                <li class="active">用户管理</li>
+            </ol>
+        </div>*@
+   
+    <div class="portlet light bordered">
+        <div class="portlet-title">
+            <div class="caption font-dark">
+                <i class="icon-list font-dark"></i>
+                <span class="caption-subject bold uppercase">用户一览</span>
+            </div>
+            <div class="tools"> </div>
+        </div>        
+        <div class="clearfix">           
+            <button type="button" class="btn blue-madison pull-right" style="margin-right:15px;" onclick="javascript:location.href='/User/Add'">添加新用户</button>
+        </div>
+        <div class="portlet-body">
+            <table id="table" class="table table-striped table-bordered table-hover dt-responsive"
+                   data-toggle="table"
+                   data-url="/User/GetList"
+                   data-detail-formatter="detailFormatter"
+                   data-click-to-select="false" data-id-field="Id"
+                   data-pagination="true" data-page-size="1" data-page-list="[50,100,200]">
+                <thead>
+                    <tr class="active">
+                        <th data-field="RealName">
+                            姓名
+                        </th>
+                        <th data-field="Username">
+                            用户名
+                        </th>
+                        <th data-field="Telphone">
+                            电话
+                        </th>
+                      
+                        <th data-formatter="operatorFormatter" data-align="center">
+                            操作
+                        </th>
+                        
+
+                    </tr >
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+@section PageLevelPluginsScript{
+    <script src="/Plugins/bootstrap-table/bootstrap-table.js"></script>
+    <script src="/Plugins/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+}
+
+@section PageLevelScripts{
+    <script>
+       
+        function operatorFormatter(value, row) {
+            return "<a title=\"编辑\" href=\"/User/Edit/" + row.Id + "\"><i class=\"glyphicon glyphicon-edit\"></i></a>" +
+                "<a title=\"删除\" onclick=\"Del(" + row.Id + ",'" + row.RealName + "')\"  style=\"margin-left:15px\"><i class=\"glyphicon glyphicon-remove\"></i></a>"+
+                "<a title=\"重置密码(重置密码为‘111111’)\" onclick=\"Rest(" + row.Id + ",'" + row.RealName + "')\"  style=\"margin-left:15px\"><i class=\"glyphicon glyphicon-repeat\"></i></a>";
+        }
+        function Del(id,realname) {
+            //alert(id + " " + realname);
+            if (confirm("确定删除姓名为:"+realname+"的用户么？")) {
+                $.ajax({
+                    type: 'Post',
+                    url: "/User/Delete",
+                    data: {id:id},
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data.State == true) {
+                            alert(data.Message);
+                            location.href="/User/Index"
+                        }
+                        else {
+                            alert(data.Message);
+                        }
+                    },
+                    error: function () {
+                        alert("删除失败");
+                    }
+
+                });            
+            }
+        }
+        function Rest(id,realname) {
+            if (confirm("确定重置姓名为:" + realname + "用户的密码么？")) {
+                $.ajax({
+                    type: 'Post',
+                    url: "/User/RestPassword/",
+                    data: { id: id },
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data.State == true) {
+                            alert(data.Message);
+                            location.href = "/User/Index"
+                        }
+                        else {
+                            alert(data.Message);
+                        }
+                    },
+                    error: function () {
+                        alert("删除失败");
+                    }
+
+                });
+            }
+        }
+    </script>
+}

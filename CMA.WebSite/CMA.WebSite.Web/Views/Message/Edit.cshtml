@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+@model CMA.Common.Model.Message
+@section PageLevelCss{
+    <link href="~/CSS/Site.css" rel="stylesheet" />
+}
+<div class="page-content">
+
+    <!--导航-->
+    <div class="breadcrumbs">
+        <h1>角色信息</h1>
+        <ol class="breadcrumb">
+            <li>
+                <a href="#">系统设置</a>
+            </li>
+            <li class="active">消息添加</li>
+        </ol>
+    </div>
+
+    <!--用户信息-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet light bordered">
+
+                <div class="portlet-title tabbable-line">
+                    <div class="caption caption-md">
+                        <i class="icon-globe theme-font hide"></i>
+                        <span class="caption-subject font-blue-madison bold uppercase">消息信息</span>
+                    </div>
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#tab_1_1" data-toggle="tab">消息</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="portlet-body">
+                    <div class="tab-content">
+
+                        <div class="tab-pane active" id="tab_1_1">
+
+
+                            @*<form id="formData" class="form-horizontal portlet-form">*@
+                            @using (Ajax.BeginForm("Edit", "Message", new AjaxOptions()
+                            {
+                                OnFailure = "helper.Failure",
+                                OnSuccess = "helper.Success",
+                                HttpMethod = "post"
+
+                            }, new
+                            {
+                                @class = "form-horizontal portlet-form",
+                                //id = "formData"
+                            }))
+                            {
+                                <div class="form-body">
+                                    @Html.HiddenFor(u => u.Id)
+                                 
+
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">@Html.DisplayNameFor(u => u.Value)</label>
+                                        <div class="col-md-4">
+                                            <div class="input-group-control">
+                                                @Html.TextAreaFor(u => u.Value, new { @class = "form-control", @placeholder = "消息值" })<br />
+                                                @Html.ValidationMessageFor(u => u.Value)
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-actions">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="row">
+                                                    <div class="col-md-offset-3 col-md-9">
+                                                        <button type="submit" class="btn green">提交</button>
+                                                        <button type="button" class="btn default">取消</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            }
+                            @*</form>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @section PageLevelScripts{
+        <script src="~/JS/HelperCommon.js"></script>
+        <script src="~/Plugins/MissoftValite/jquery.validate.min.js"></script>
+
+        <script src="~/Plugins/MissoftValite/jquery.validate.unobtrusive.min.js"></script>
+        <script src="~/Plugins/MissoftValite/jquery.unobtrusive-ajax.min.js"></script>
+
+
+
+
+
+    }
+

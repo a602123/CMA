@@ -1,0 +1,4 @@
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.CoreClient\bin\Release\CMA.WebSite.CoreClient.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.CoreClient\bin\Release\CMA.WebSite.CoreClient.pdb
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.CoreClient\obj\Release\CMA.WebSite.CoreClient.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.CoreClient\obj\Release\CMA.WebSite.CoreClient.pdb

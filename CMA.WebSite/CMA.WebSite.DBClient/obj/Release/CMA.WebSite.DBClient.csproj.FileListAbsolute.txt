@@ -1,0 +1,13 @@
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.DBClient\obj\Release\CMA.WebSite.DBClient.csprojResolveAssemblyReference.cache
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.DBClient\bin\Release\CMA.WebSite.DBClient.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.DBClient\bin\Release\CMA.WebSite.DBClient.pdb
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.DBClient\bin\Release\CMA.Common.Model.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.DBClient\bin\Release\CMA.Common.WebApiClient.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.DBClient\bin\Release\Newtonsoft.Json.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.DBClient\bin\Release\System.Net.Http.Formatting.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.DBClient\bin\Release\CMA.Common.Model.pdb
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.DBClient\bin\Release\CMA.Common.WebApiClient.pdb
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.DBClient\bin\Release\Newtonsoft.Json.xml
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.DBClient\bin\Release\System.Net.Http.Formatting.xml
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.DBClient\obj\Release\CMA.WebSite.DBClient.dll
+F:\GitTest\CMA\CMA.WebSite\CMA.WebSite.DBClient\obj\Release\CMA.WebSite.DBClient.pdb

@@ -1,0 +1,9 @@
+F:\GitTest\CMA\CMA.CollectCenter\Collector2\bin\Debug\Collector2.dll
+F:\GitTest\CMA\CMA.CollectCenter\Collector2\bin\Debug\Collector2.pdb
+F:\GitTest\CMA\CMA.CollectCenter\Collector2\bin\Debug\CMA.CollectCenter.Base.dll
+F:\GitTest\CMA\CMA.CollectCenter\Collector2\bin\Debug\CMA.Common.Model.dll
+F:\GitTest\CMA\CMA.CollectCenter\Collector2\bin\Debug\CMA.CollectCenter.Base.pdb
+F:\GitTest\CMA\CMA.CollectCenter\Collector2\bin\Debug\CMA.Common.Model.pdb
+F:\GitTest\CMA\CMA.CollectCenter\Collector2\obj\Debug\Collector2.csprojResolveAssemblyReference.cache
+F:\GitTest\CMA\CMA.CollectCenter\Collector2\obj\Debug\Collector2.dll
+F:\GitTest\CMA\CMA.CollectCenter\Collector2\obj\Debug\Collector2.pdb

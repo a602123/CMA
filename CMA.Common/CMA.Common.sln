@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMA.Common.Model", "CMA.Common.Model\CMA.Common.Model.csproj", "{62FF1B42-740E-4581-8B01-A2AD5AD6C149}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMA.Common.RedisHelper", "CMA.Common.RedisHelper\CMA.Common.RedisHelper.csproj", "{3EBAA9C6-D09E-4BCE-B3CB-3FC778160470}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMA.Common.WebApiClient", "CMA.Common.WebApiClient\CMA.Common.WebApiClient.csproj", "{5179AE7B-4333-41B4-8C43-9A58776DF3EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMA.Common.Test", "CMA.Common.Test\CMA.Common.Test.csproj", "{3C41B552-F9E3-48B4-898D-A460D85CCAB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMA.Common.EncryptionHelper", "CMA.Common.EncryptionHelper\CMA.Common.EncryptionHelper.csproj", "{4BC07557-53C9-41E2-8B2F-CAE4533FE30D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMA.Common.MySQLHelper", "CMA.Common.MySQLHelper\CMA.Common.MySQLHelper.csproj", "{3C263D24-7330-4D44-B06C-F37049BFB75D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62FF1B42-740E-4581-8B01-A2AD5AD6C149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62FF1B42-740E-4581-8B01-A2AD5AD6C149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62FF1B42-740E-4581-8B01-A2AD5AD6C149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62FF1B42-740E-4581-8B01-A2AD5AD6C149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EBAA9C6-D09E-4BCE-B3CB-3FC778160470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EBAA9C6-D09E-4BCE-B3CB-3FC778160470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EBAA9C6-D09E-4BCE-B3CB-3FC778160470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EBAA9C6-D09E-4BCE-B3CB-3FC778160470}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5179AE7B-4333-41B4-8C43-9A58776DF3EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5179AE7B-4333-41B4-8C43-9A58776DF3EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5179AE7B-4333-41B4-8C43-9A58776DF3EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5179AE7B-4333-41B4-8C43-9A58776DF3EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C41B552-F9E3-48B4-898D-A460D85CCAB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C41B552-F9E3-48B4-898D-A460D85CCAB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C41B552-F9E3-48B4-898D-A460D85CCAB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C41B552-F9E3-48B4-898D-A460D85CCAB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BC07557-53C9-41E2-8B2F-CAE4533FE30D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BC07557-53C9-41E2-8B2F-CAE4533FE30D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BC07557-53C9-41E2-8B2F-CAE4533FE30D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BC07557-53C9-41E2-8B2F-CAE4533FE30D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C263D24-7330-4D44-B06C-F37049BFB75D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C263D24-7330-4D44-B06C-F37049BFB75D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C263D24-7330-4D44-B06C-F37049BFB75D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C263D24-7330-4D44-B06C-F37049BFB75D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

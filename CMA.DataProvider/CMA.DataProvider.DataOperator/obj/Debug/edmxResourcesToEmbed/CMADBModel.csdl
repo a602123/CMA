@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CMA.DataProvider.Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tb_message">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Time" Type="DateTime" Nullable="false" />
+    <Property Name="Device" Type="Int32" Nullable="false" />
+    <Property Name="Value" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ValueType" Type="Int32" Nullable="false" />
+    <Property Name="cFree1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="bFree1" Type="Boolean" />
+    <Property Name="iFree1" Type="Int32" />
+    <Property Name="fFree1" Type="Single" />
+  </EntityType>
+  <EntityContainer Name="db_cmaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tb_message" EntityType="Self.tb_message" />
+    <EntitySet Name="tb_user" EntityType="CMA.DataProvider.Model.tb_user" />
+    <EntitySet Name="tb_role" EntityType="CMA.DataProvider.Model.tb_role" />
+    <AssociationSet Name="tb_userrole" Association="CMA.DataProvider.Model.tb_userrole">
+      <End Role="tb_role" EntitySet="tb_role" />
+      <End Role="tb_user" EntitySet="tb_user" />
+    </AssociationSet>
+    <EntitySet Name="tb_action" EntityType="CMA.DataProvider.Model.tb_action" />
+    <AssociationSet Name="tb_roleaction1" Association="CMA.DataProvider.Model.tb_roleaction1">
+      <End Role="tb_action" EntitySet="tb_action" />
+      <End Role="tb_role" EntitySet="tb_role" />
+    </AssociationSet>
+    <EntitySet Name="tb_monitoritem" EntityType="CMA.DataProvider.Model.tb_monitoritem" />
+    <EntitySet Name="tb_collector" EntityType="CMA.DataProvider.Model.tb_collector" />
+  </EntityContainer>
+  <EntityType Name="tb_user">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RealName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Telphone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="Int32" />
+    <NavigationProperty Name="tb_role" Relationship="CMA.DataProvider.Model.tb_userrole" FromRole="tb_user" ToRole="tb_role" />
+  </EntityType>
+  <EntityType Name="tb_role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="cFree" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="iFree" Type="Int32" />
+    <NavigationProperty Name="tb_user" Relationship="CMA.DataProvider.Model.tb_userrole" FromRole="tb_role" ToRole="tb_user" />
+    <NavigationProperty Name="tb_action" Relationship="CMA.DataProvider.Model.tb_roleaction1" FromRole="tb_role" ToRole="tb_action" />
+  </EntityType>
+  <Association Name="tb_userrole">
+    <End Type="CMA.DataProvider.Model.tb_role" Role="tb_role" Multiplicity="*" />
+    <End Type="CMA.DataProvider.Model.tb_user" Role="tb_user" Multiplicity="*" />
+  </Association>
+  <EntityType Name="tb_action">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="cFree" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="iFree" Type="Int32" />
+    <NavigationProperty Name="tb_role" Relationship="CMA.DataProvider.Model.tb_roleaction1" FromRole="tb_action" ToRole="tb_role" />
+  </EntityType>
+  <Association Name="tb_roleaction1">
+    <End Type="CMA.DataProvider.Model.tb_action" Role="tb_action" Multiplicity="*" />
+    <End Type="CMA.DataProvider.Model.tb_role" Role="tb_role" Multiplicity="*" />
+  </Association>
+  <EntityType Name="tb_monitoritem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Host" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Note" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ItemType" Type="Int32" />
+    <Property Name="Paramter" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="CollectorHost" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_collector">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Host" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Note" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

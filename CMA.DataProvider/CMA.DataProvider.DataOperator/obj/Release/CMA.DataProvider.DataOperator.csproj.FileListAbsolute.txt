@@ -1,0 +1,8 @@
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.DataOperator\bin\Release\CMA.DataProvider.DataOperator.dll.config
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.DataOperator\bin\Release\CMA.DataProvider.DataOperator.dll
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.DataOperator\bin\Release\CMA.DataProvider.DataOperator.pdb
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.DataOperator\bin\Release\EntityFramework.dll
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.DataOperator\bin\Release\EntityFramework.xml
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.DataOperator\bin\Release\zh-Hans\EntityFramework.resources.dll
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.DataOperator\obj\Release\CMA.DataProvider.DataOperator.dll
+F:\GitTest\CMA\CMA.DataProvider\CMA.DataProvider.DataOperator\obj\Release\CMA.DataProvider.DataOperator.pdb
